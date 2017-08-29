@@ -14,29 +14,31 @@
 
 </head>
 <body>
-  <nav id="main-nav">
+  <nav id="main-nav" class="nav-up">
     <div class="row">
     <div class="nav-line-left"></div>
       <div class="left-side">
         <a href="./">
-          <img src="./assets/img/ph_logo6.png" alt="JNT Creative LLC" title="JNT Creative LLC">
+          <img src="./assets/img/ph_logo6.png" class="top-logo" alt="JNT Creative LLC" title="JNT Creative LLC">
+          <img src="./assets/img/ph_logo9.png" class="scroll-logo" alt="JNT Creative LLC" title="JNT Creative LLC">
         </a>
       </div>
       <div class="nav-line-center"></div>
       <div class="right-side">
-        <ul class="nav-links">
+        <ul class="nav-links transition">
           <li><a href="#">Home</a></li>
           <li><a href="#">Services</a></li>
           <li><a href="#">Work</a></li>
           <li><a href="#">Contact</a></li>
           <li><a class="cta-button" href="#">Free Quote</a></li>
         </ul>
-        <span class="lnr lnr-menu mobile-menu-button"></span>
       </div>
-
+      <span class="lnr lnr-cross mobile-menu-exit-button mobile-close"></span>
+      <span class="lnr lnr-menu mobile-menu-button"></span>
       <div class="nav-line-right"></div>
     </div>
   </nav>
+
   <div class="intro-section">
     <div class="row">
       <div class="large-12 columns">
@@ -57,11 +59,36 @@
         <li></li>
       </ul>
     </div>
-    <a class="learn-more-link" href="#next"><span class="lnr lnr-chevron-down learn-more"></span></a>
+    <a class="learn-more-link" href="#services"><span class="lnr lnr-chevron-down learn-more"></span></a>
   </div>
   <div class="services-section">
     <div class="row">
-      <h2>Services</h2>
+      <h2 id="services">Services</h2>
+      <p class="short-para">We provide every digital desire your business can imagine. From websites and mobile apps to marketing and promotional material.</p>
+      <div class="icon-set">
+        <div class="icon-item">
+          <div class="icon-container">
+            <span class="lnr lnr-eye"></span>
+          </div>
+          <h3>Mobile App Development </h3>
+          <p>Fugiat iusto eveniet quaerat aliquam quas similique expedita, molestias fugiat expedita.</p>
+        </div>
+          <div class="icon-item">
+          <div class="icon-container cta">
+            <span class="lnr lnr-magic-wand"></span>
+          </div>
+          <h3>Web Design &amp; Development</h3>
+          <p>Ipsum dolor sit amet consectetur adipisicing elit. Cumque repellat non molestias fugiat</p>
+        </div>
+          <div class="icon-item last">
+          <div class="icon-container">
+            <span class="lnr lnr-rocket"></span>
+          </div>
+          <h3>Marketing &amp; SEO</h3>
+          <p>Cumque repellat non molestias fugiat iusto eveniet quaerat aliquam quas similique expedita.</p>
+        </div>
+        <div class="clearfix"></div>
+      </div>
     </div>
   </div>
     	

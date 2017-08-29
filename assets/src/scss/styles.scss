@@ -22,17 +22,24 @@ $breakpoints: (
 
 /* COLORS */
 $primary-color: #5454ff;
+$off-black: #3d3d3d;
 
 /* TYPOGRAPHY */
 h1, h2, h3, h4, h5, h6, h1 span {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 900;
-	color:$primary-color;
+	color:$off-black;
 }
 
 body, span, p, a{
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 400;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 26px;
 }
 
 html, body {
@@ -43,12 +50,12 @@ html, body {
 
 nav {
 	display: block;
-    position: fixed;
-    width: 100%;
-    //border-bottom: 1px solid #fff;
-    transition: all .25s;
-    
-    text-transform: uppercase;
+  position: fixed;
+  width: 100%;
+  //border-bottom: 1px solid #fff;
+  transition: all .25s;
+  z-index: 10000;
+  text-transform: uppercase;
     .left-side {
     	 display: block;
 
@@ -67,15 +74,18 @@ nav {
     }
     .right-side {
     	float: right;
+
     	.nav-links {
 		    list-style: none;
 		    margin: 2.2em 0;
 		    padding: 0px;
 		    float: left;
-		    display: none;
+        left: 100%;
+        position: absolute;
 
 		    @include breakpoint(medium) {
 		    	display: block;
+          position: static;
 		    }
 		    li {
 		    	float: left;
@@ -96,24 +106,76 @@ nav {
 		    	}
 		    }
     	}
-    	.mobile-menu-button {
-    		display: block;
-    		color: #fff;
-		    font-size: 50px;
-		    position: relative;
-		    top: 25px;
-		    left: -15px;
 
-		    @include breakpoint(medium) {
-		    	display: none;
-		    }
-    	}
     }
 }
 
+.mobile-menu-button {
+  display: block;
+  color: #fff;
+  font-size: 50px;
+  position: absolute;
+  top: 22px;
+  right: 15px;
+
+  @include breakpoint(medium) {
+    display: none;
+  }
+}
+
+.nav-up {
+  .top-logo {
+    display: block;
+  }
+}
+
+.mobile-menu-exit-button {
+    position: absolute;
+    top: 22px;
+    right: 15px;
+    color: $primary-color;
+    font-size: 50px;
+    display: none;
+}
+
+
+
+nav.mobile-menu .right-side .nav-links{
+    display: block;
+    position: absolute;
+    top: -40px;
+    left: 0px;
+    background: #fff;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    padding-top: 4em;
+    li {
+      margin: 0px;
+      float: none;
+      a {
+        color: $primary-color;
+        display: block;
+        margin: 1em 0;
+      }
+      .cta-button {
+        border-color: $primary-color;
+        max-width: 50%;
+        width: 300px;
+        margin: 0 auto;
+      }
+    }
+}
+
+.transition {
+  transition: all .25s;
+}
 .nav-down {
-	background: rgba(255, 255, 255, 0.8);
+	background: #fff;
 	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.125);
+  .mobile-menu-button {
+    color: $primary-color;
+  }
 	.right-side {
 		ul {
 			li {
@@ -126,9 +188,22 @@ nav {
 			}
 		}
 	}
+  .right-side .mobile-menu-button {
+    color: $primary-color;
+  }
 	.nav-line-left, .nav-line-right, .nav-line-center {
 		border-color: $primary-color;
 	}
+  .scroll-logo {
+    display: block;
+  }
+  .top-logo {
+    display: none;
+  }
+}
+
+.scroll-logo {
+  display: none;
 }
 
 
@@ -356,6 +431,78 @@ nav {
 		text-align: center;
 		margin-top: 2em;
 	}
+}
+
+
+.icon-set {
+    display: block;
+    width: 100%;
+    margin: 75px auto 100px;
+    text-align: center;
+    .icon-item {
+      display: block;
+      width: 100%; 
+      float: left;
+      margin-bottom: 2.5em;
+      @include breakpoint (medium) {
+        width: 33%;
+        margin-bottom:0px;
+        border-right: 1px solid #ccc;
+      }
+      .icon-container {
+        display: block;
+        margin: 0 auto;
+        width: 120px;
+        height: 120px;
+        border-radius: 100%;
+        background: linear-gradient(45deg, rgba(5, 19, 255, 0.72), rgba(147, 5, 255, 0.72));
+        color: #fff;
+        text-align: center;
+        font-size: 70px; 
+        .lnr {
+            display: block;
+            padding-top: 26px;
+        }
+      }
+      .icon-container.cta {
+        transform: scale(1.2);
+      }
+      h3, p  {
+        padding: 0 50px;
+        color: #545454;
+        margin:0px;
+      }
+      h3 {
+         margin: 1em 0 .25em;
+         color: #3d3d3d;
+         font-size:24px;
+         letter-spacing:3px;
+         text-transform: uppercase;
+      }
+      p {
+        font-size:18px;
+        font-weight: 300;
+        line-height:26px;
+      }
+    }
+  .icon-item.last {
+    border-right: none;
+  }
+
+}
+.clearfix {
+  clear: both;
+}
+
+.short-para {
+    text-align: center;
+    background: #fff;
+    display: block;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+    width: 300px;
+    margin: 0 auto;
 }
 
 /* FORMS */
