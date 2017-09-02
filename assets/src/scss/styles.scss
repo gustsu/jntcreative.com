@@ -2,7 +2,9 @@
 $breakpoints: (
   'small':  500px,
   'medium': 640px,
-  'large':  1200px
+  'large':  1024px,
+  'x-large':  1400px,
+  'xx-large':  1650px
 ) !default;
 @mixin breakpoint($breakpoint) {
   // If the key exists in the map
@@ -30,6 +32,32 @@ h1, h2, h3, h4, h5, h6, h1 span {
 	font-weight: 900;
 	color:$off-black;
 }
+
+h2 {
+  font-size: 2rem;
+  line-height: 2.75rem;
+  font-weight: 400;
+  color: #020101;
+  @include breakpoint (medium) {
+    font-size:2.5rem; 
+    line-height: 3.25rem;
+  }
+}
+
+
+h3 {
+  font-size:1.3125rem; 
+  line-height: 2rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #020101;
+  @include breakpoint (medium) {
+    font-size:1.5rem; 
+    line-height: 2.125rem;
+  }
+}
+
 
 body, span, p, a{
 	font-family: 'Source Sans Pro', sans-serif;
@@ -91,8 +119,8 @@ nav {
 		    margin: 2.2em 0;
 		    padding: 0px;
 		    float: left;
-        left: 100%;
         position: absolute;
+        display: none;
 
 		    @include breakpoint(large) {
 		    	display: block;
@@ -182,18 +210,20 @@ nav.mobile-menu .right-side .nav-links{
     width: 100%;
     text-align: center;
     padding-top: 4em;
+    display: none;
     li {
       margin: 0px;
       float: none;
       a {
         color: $primary-color;
         display: block;
-        margin: 1em 0;
+        margin: 1.5em 0;
+        font-size: 26px;
       }
       .cta-button {
-        border-color: $primary-color;
-        max-width: 50%;
-        width: 300px;
+        max-width: 400px;
+        width: 90%;
+        color: #fff;
         margin: 0 auto;
       }
     }
@@ -286,10 +316,12 @@ nav.mobile-menu .right-side .nav-links{
 	h1 {
 	    margin-top: 3em;
 	    color: #fff;
-	    font-size: 5em;
-	    line-height: 1.2em;
+	    font-size: 4em;
+	    line-height: 1em;
 	    @include breakpoint(medium) {
 	    	margin-top: 4em;
+        font-size: 5em;
+        line-height: 1.2em;
 	    }
 		.seperator {
 		    display: block;
@@ -303,16 +335,26 @@ nav.mobile-menu .right-side .nav-links{
 		span {
 		    display: block;
 		    margin-bottom: .2em;
-		    font-size: 30px;
+		    
 		    font-weight: 300;
 		    color: #fff;
+        font-size: 24px;
+        margin-top: 11px;
+
+        @include breakpoint (medium) {
+          margin-top: 0px;
+          font-size: 30px;
+        }
 		}
 	}
 
 	.learn-more-link {
 		margin: 0 auto;
-	    display: block;
-	    width: 100px;
+	  display: block;
+	  width: 100px;
+    &:hover {
+      text-decoration: none;
+    };
 	}
 
 	.learn-more {
@@ -475,24 +517,62 @@ nav.mobile-menu .right-side .nav-links{
 
 .giant-mockup {
     position: absolute;
-    right: 0px;
-    width: 660px;
-    top: -120px;
-    display: none;
+    right: -70px;
+    width: 240px;
+    top: -20px;
     @include breakpoint(medium) {
       display: block;
       width: 380px;
     }
     @include breakpoint(large) {
-      width: 660px;
+      width: 550px;
+      right: 0px;
     }
+    @include breakpoint(x-large) {
+      width: 660px;
+      top: -120px;
+    }
+}
+
+.icon-item-shadow {
+  position: relative;
+  @include breakpoint (large) {
+  &:before {
+    content: '';
+    width: 32px;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0;
+    display: block;
+    z-index: -1;
+    box-shadow: 32px 0 0 0 #fff, 0 -32px 0 0 #fff, 0 32px 0 0 #fff, 32px 32px 0 0 #fff, 32px -32px 0 0 #fff, 0 0 32px 0 rgba(0, 0, 0, 0.15);
+  };
+  &:after {
+    content: '';
+    width: 32px;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    display: block;
+    z-index: -1;
+    box-shadow: -32px 0 0 0 #fff, 0 -32px 0 0 #fff, 0 32px 0 0 #fff, -32px 32px 0 0 #fff, -32px -32px 0 0 #fff, 0 0 32px 0 rgba(0, 0, 0, 0.15);
+  };
+
+  }
+
 }
 
 .icon-set {
     display: block;
     width: 100%;
-    margin: 75px auto 100px;
+    margin: 20px auto 50px;
     text-align: center;
+
+    @include breakpoint (medium) {
+      margin: 75px auto 100px;
+    }
     .icon-item {
       display: block;
       width: 100%; 
@@ -501,7 +581,8 @@ nav.mobile-menu .right-side .nav-links{
       @include breakpoint (large) {
         width: 33%;
         margin-bottom:0px;
-        border-right: 1px solid #ccc;
+
+        //border-right: 1px solid #ccc;
       }
       .icon-container {
         display: block;
@@ -565,19 +646,24 @@ nav.mobile-menu .right-side .nav-links{
 }
 
 .about-section {
-  padding: 140px 0 100px;
+  padding: 140px 0 40px;
   position: relative;
   z-index: 9000;
   float: left;
   width: 100%;
+  @include breakpoint (medium) {
+    padding: 140px 0 100px;
+  }
 }
 
 .work-section {
   float: left;
   width: 100%;
   display: block;
-  margin-top: 40px;
   position: relative;
+  @include breakpoint (medium) {
+    margin-top: 40px;
+  }
 }
 
 
@@ -754,7 +840,8 @@ nav.mobile-menu .right-side .nav-links{
           }
 
       .tiles article.style1 > .image:before {
-        background:linear-gradient(45deg, rgba(5, 19, 255, 0.72), rgba(147, 5, 255, 0.72));
+        //background:linear-gradient(45deg, rgba(5, 19, 255, 0.72), rgba(147, 5, 255, 0.72));
+        background: $primary-color;
       }
 
       .tiles article.style2 > .image:before {
@@ -876,6 +963,65 @@ nav.mobile-menu .right-side .nav-links{
 
 /* FORMS */
 
+#quote-form {
+    position: relative;
+    max-width: 640px;
+    width: 90%;
+    top: 8%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.99);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.77);
+    padding: 2.25em;
+    display: none;
+    z-index: 90000;
+    position: fixed;
+    left: 5%;
+    @include breakpoint (medium) {
+      left: calc(50% - 320px);
+    }
+    p {
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 30px;
+    }
+    .quote-exit-button {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      font-size: 50px;
+      color: #f35340;
+      cursor: pointer;
+    }
+    .form-section {
+      margin-bottom: 1.5em;
+    }
+    input, textarea {
+      background: none !important;
+      font-size: 21px !important;
+      padding: 21px 0px !important;
+    }
+    textarea {
+      margin-bottom: 1em;
+      padding: 0px !important;
+    }
+    button {
+      margin-bottom: 0px;
+      width: 100%;
+    }
+}
+
+
+.quote-overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    z-index: 90000;
+    display: none;
+    overflow: auto;
+}
 .contact-section {
     float: left;
     width: 100%;
@@ -884,17 +1030,32 @@ nav.mobile-menu .right-side .nav-links{
 }
 
 .form-section.form-section-half-last {
-    width: 50%;
+    width: 100%;
     float: left;
     display: block;
-    padding-left: 10px;
+    
+    @include breakpoint (medium) {
+      padding-left: 10px;
+      width: 50%;
+    }
 }
 
 .form-section.form-section-half-first {
-    width: 50%;
+    width: 100%;
     float: left;
     display: block;
-    padding-right: 10px;
+    @include breakpoint (medium) {
+      padding-right: 10px;
+      width: 50%;
+    }
+}
+
+#contact-form {
+  text-align: center; 
+  @include breakpoint (medium) {
+    text-align: left;
+  }
+
 }
 
 
@@ -907,8 +1068,8 @@ form .form-section textarea {
     border-bottom: 2px solid #ccc;
     background: #fff;
     box-shadow: none;
-    font-size: 30px;
-    padding: 30px 0px;
+    font-size: 27px;
+    padding: 27px 0px;
 
     &:focus {
       box-shadow: none;
@@ -918,8 +1079,8 @@ form .form-section textarea {
     };
 }
 form .form-section textarea {
-  min-height: 120px;
-  height: 120px;
+  min-height: 140px;
+  height: 140px;
   resize: vertical;
   color: #cacaca;
 }
@@ -943,6 +1104,9 @@ form button {
       border-color:$primary-color;
     };
 }
+.transition-left {
+  transition: left .25s;
+}
 
 hr.gradient-line {
     margin: 0px;
@@ -961,15 +1125,41 @@ hr.gradient-line.center {
 
 /* FOOTER */
 
+span.footer-cta {
+  font-weight: 700;
+  font-size: 16px;
+}
+
 .footer-giant-mockup {
-      width: 840px;
+    width: 300px;
     position: absolute;
-    right: -130px;
-    bottom: 0px;
+    bottom: 122px;
+    right: -40px;
+    @include breakpoint(medium) {
+        width: 500px;
+        position: absolute;
+        bottom: 122px;
+        right: -60px;
+    }
+
+    @include breakpoint(large) {
+        width: 840px;
+        right: -470px;
+        bottom: 0px;
+    }
+    @include breakpoint(x-large) {
+        right: -250px;
+    }
+    @include breakpoint(xx-large) {
+        right: -130px;
+    }
 }
 
 .space-it-out {
-  margin-bottom: 150px;
+  margin-bottom: 280px;
+  @include breakpoint(large) {
+    margin-bottom: 150px;
+  }
 }
 
 footer {
@@ -978,17 +1168,26 @@ footer {
     padding: 30px 0;
     //background: #fafafa;
     //border-top: 1px solid #f3f3f3;
-    background: $primary-color;
+    //background: $primary-color;
+    background: linear-gradient(45deg, rgba(5, 19, 255, 0.72), rgba(147, 5, 255, 0.72));
   span {
     //color: #908e8e;
     color: #fff;
-    text-transform: uppercase;
+    //text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 14px;
+    display: block;
+    @include breakpoint (large) {
+      display: inline;
+    }
 
   }
   span.seperator {
-    color: #ccc;
+    color: #020101;
+    display: none;
+    @include breakpoint (large) {
+      display: inline;
+    }
   }
   a {
     color: #ccc;

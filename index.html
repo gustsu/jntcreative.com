@@ -27,12 +27,12 @@
       </div>
       <div class="nav-line-center"></div>
       <div class="right-side">
-        <ul class="nav-links transition">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Work</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a class="cta-button" href="#">Free Quote</a></li>
+        <ul class="nav-links transition-left">
+          <li><a href="#intro">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="cta-button" id="free-q">Free Quote</a></li>
         </ul>
       </div>
       <span class="lnr lnr-cross mobile-menu-exit-button mobile-close"></span>
@@ -40,8 +40,32 @@
       <div class="nav-line-right"></div>
     </div>
   </nav>
+  <div class="quote-overlay"></div>
+    <form id="quote-form">
+      <span class="lnr lnr-cross quote-exit-button"></span>
+      <h2>Interested In a Free Quote?</h2>
+      <hr class="gradient-line">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.</p>
+      <div class="form-section">
+        <input type="text" name="name" placeholder="Your Name">
+      </div>
+      <div class="form-section">
+        <input type="email" name="email" placeholder="Your Email">
+      </div>
+      <div class="form-section">
+        <input type="text" name="project" placeholder="Project Name">
+      </div>
+      <div class="form-section">
+        <input type="text" name="budget" placeholder="Your Budget">
+      </div>
+      <div class="form-section">
+        <textarea name="more">Tell Me More</textarea>
+      </div>
+      <button class="space-it-out" type="submit">Get a Free Quote!</button>
+    </form>
 
-  <div class="intro-section">
+  <div id="intro" class="intro-section">
     <div class="row">
       <div class="large-12 columns">
         <h1>Custom <br>Web Design <hr class="seperator"><span class=lower>In Spokane, Washington</span></h1>
@@ -61,11 +85,11 @@
         <li></li>
       </ul>
     </div>
-    <a class="learn-more-link" href="#services"><span class="lnr lnr-chevron-down learn-more"></span></a>
+    <a class="learn-more-link" href="#about"><span class="lnr lnr-chevron-down learn-more"></span></a>
   </div>
-  <div class="about-section">
+  <div id="about" class="about-section">
     <div class="row">
-      <div class="small-12 medium-6 columns">
+      <div class="small-8 medium-6 columns">
         <h2>Lorem</h2>
         <hr class="gradient-line">
         <p class="short-para left-align">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ea officia eveniet, aspernatur ipsam quidem praesentium quia aliquid, ab, est quas. Laborum asperiores voluptate modi soluta non aut esse quae.</p>
@@ -73,7 +97,7 @@
     </div>
       <img class="giant-mockup" src="./assets/img/a5.png">
   </div>
-  <div class="services-section">
+  <div id="services" class="services-section">
     <div class="row">
       <h2 id="services">Services</h2>
       <hr class="gradient-line center">
@@ -86,7 +110,7 @@
           <h3>Mobile App Development </h3>
           <p>Fugiat iusto eveniet quaerat aliquam quas similique expedita, molestias fugiat expedita.</p>
         </div>
-          <div class="icon-item">
+          <div class="icon-item icon-item-shadow">
           <div class="icon-container cta">
             <span class="lnr lnr-magic-wand"></span>
           </div>
@@ -97,15 +121,15 @@
           <div class="icon-container">
             <span class="lnr lnr-rocket"></span>
           </div>
-          <h3>Marketing &amp; SEO</h3>
+          <h3>Graphic Design &amp; Marketing</h3>
           <p>Cumque repellat non molestias fugiat iusto eveniet quaerat aliquam quas similique expedita.</p>
         </div>
         <div class="clearfix"></div>
       </div>
     </div>
   </div>
-  <div class="work-section">
-    <img class="work-giant-mockup" src="./assets/img/a9.png">
+  <div id="work" class="work-section">
+<!--     <img class="work-giant-mockup" src="./assets/img/a9.png"> -->
     <div class="row columns">
       <div class="intro-work">
         <h2>Work</h2>
@@ -117,12 +141,12 @@
               <section class="tiles">
                 <article class="style1">
                   <span class="image">
-                    <img src="./assets/img/pic02.jpg" alt="" />
+                    <img src="./assets/img/work_jamesfrye.png" alt="" />
                   </span>
                   <a href="generic.html">
-                    <h3>Magna</h3>
+                    <h3>James Frye</h3>
                     <div class="content">
-                      <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+                      <p>Jamesfryeartist.com</p>
                     </div>
                   </a>
                 </article>
@@ -184,12 +208,12 @@
               </section>
       </div>
   </div>
-  <div class="contact-section">
+  <div id="contact" class="contact-section">
     <div class="row">
-      <div class="small-12 medium-8 columns">
+      <div class="small-12 medium-12 large-8 columns">
       <h2>Contact Us</h2>
       <hr class="gradient-line"> 
-      <form>
+      <form id="contact-form">
         <div class="form-section form-section-half-first">
           <input type="text" name="name" placeholder="Name">
         </div>
@@ -206,9 +230,9 @@
     </div>
     <footer>
     <div class="row columns">
-      <span>Created with love by JNT CREATIVE LLC</span>
+      <span class="footer-cta">JNT CREATIVE LLC</span>
       <span class="seperator">/</span>
-      <span> All rights reserved</span>
+      <span> All rights reserved &copy; 2017</span>
       <span class="seperator">/</span>
       <span>Hosted By: <a href="#">Digital Ocean</a></span>
     </div>
