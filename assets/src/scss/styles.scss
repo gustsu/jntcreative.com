@@ -87,6 +87,62 @@ html, body {
 
 /* NAVIGATION */
 
+.lb-exit-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 50px;
+    color: #f35340;
+    cursor: pointer;
+}
+
+.lb-content {
+  position: fixed;
+  top: 8%;
+  z-index: 100000;
+  max-width: 1024px;
+  width: 95%;
+  background: #fff;
+  margin: 0 auto;
+  display: none;
+  padding: 2em;
+  left: 50%;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.77);
+  transform: translateX(-50%);
+
+
+
+  img {
+    max-width: 640px;
+    width: 75%;
+    margin: 0 auto 30px;
+    display: block;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+  }
+  .lower {
+    border-top: 1px solid #dedede;
+    padding-top: 12px;
+    max-width: 640px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  p {
+    margin-bottom: 0px;
+  }
+}
+.lb-overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    z-index: 90000;
+    display: none;
+    overflow: auto;
+}
+
 nav {
 	display: block;
   position: fixed;
@@ -153,7 +209,9 @@ nav {
             transition: all .25s;
             &:hover{
               text-decoration:none;
-              border-color:$primary-color;
+              //border-color:$primary-color;
+              border-bottom: 3px solid $primary-color;
+              border-top: 2px solid #040498;
               color: #fff;
             };
 		    	}
@@ -309,17 +367,34 @@ nav.mobile-menu .right-side .nav-links{
 
 /* BODY */
 
+.bs-callout {
+  display: none;
+}
+
+p.parsley-success {
+  color: #468847;
+  background-color: #DFF0D8;
+  border: 1px solid #D6E9C6;
+}
+p.parsley-error {
+  color: #B94A48;
+  background-color: #F2DEDE;
+  border: 1px solid #EED3D7;
+}
+
 .intro-section {
 	//background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
     //background: linear-gradient(305deg, #154c4b 0%, #53e3dc 100%);
-    background: linear-gradient(45deg, rgba(5, 19, 255, 0.72), rgba(147, 5, 255, 0.72));
+    background: linear-gradient(45deg, rgba(5, 19, 255, 0.5), rgba(147, 5, 255, 0.5)), url('../../assets/img/stock1.jpg');
+    background-size: cover;
+    background-position: top; 
 	h1 {
-	    margin-top: 3em;
+	    margin-top: 2em;
 	    color: #fff;
 	    font-size: 4em;
 	    line-height: 1em;
+      text-align: left;
 	    @include breakpoint(medium) {
-	    	margin-top: 4em;
         font-size: 5em;
         line-height: 1.2em;
 	    }
@@ -334,7 +409,7 @@ nav.mobile-menu .right-side .nav-links{
 		}
 		span {
 		    display: block;
-		    margin-bottom: .2em;
+		    margin-bottom: 0em;
 		    
 		    font-weight: 300;
 		    color: #fff;
@@ -346,7 +421,36 @@ nav.mobile-menu .right-side .nav-links{
           font-size: 30px;
         }
 		}
+
 	}
+
+  a.free-q {
+      border: none;
+      border-radius: 15px;
+      padding: 1em 1.8em;
+      /* background: #5454ff; */
+      color: #fff;
+      font-weight: 900;
+      /* border-bottom: 3px solid #040498; */
+      /* border-top: 2px solid #6e6eff; */
+      transition: all .25s;
+      font-size: 22px;
+      background: #ff5454;
+      margin-bottom: 5.5em;
+      display: inline-block;
+      position: relative;
+      z-index: 1000;
+      text-transform: uppercase;
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+      border-bottom: 3px solid #963636;
+      border-top: 2px solid #e67373;
+      &:hover{
+        border-bottom: 3px solid #ff5454;
+        border-top: 2px solid #963636;
+        text-decoration: none;
+      };
+    }
 
 	.learn-more-link {
 		margin: 0 auto;
@@ -393,6 +497,7 @@ nav.mobile-menu .right-side .nav-links{
 
 .bg-bubble-container {
 	position: relative;
+  display: none;
 }
 
 .bg-bubbles{
@@ -454,18 +559,18 @@ nav.mobile-menu .right-side .nav-links{
     
     &:nth-child(6){
       left: 80%;
-      width: 120px;
-      height: 120px;
+      width: 50px;
+      height: 50px;
       
       animation-delay: 3s;
-      background-color: rgba(255,255,255,.2);
+      background-color: rgba(255,255,255,.125);
     }
     
     &:nth-child(7){
       left: 32%;
       width: 160px;
       height: 160px;
-      
+      background-color: rgba(255,255,255,.16);
       animation-delay: 7s;
     }
     
@@ -473,7 +578,7 @@ nav.mobile-menu .right-side .nav-links{
       left: 55%;
       width: 20px;
       height: 20px;
-      
+      background-color: rgba(255,255,255,.125);
       animation-delay: 15s;
       animation-duration: 40s;
     }
@@ -567,7 +672,7 @@ nav.mobile-menu .right-side .nav-links{
 .icon-set {
     display: block;
     width: 100%;
-    margin: 20px auto 50px;
+    margin: 50px auto 50px;
     text-align: center;
 
     @include breakpoint (medium) {
@@ -577,7 +682,7 @@ nav.mobile-menu .right-side .nav-links{
       display: block;
       width: 100%; 
       float: left;
-      margin-bottom: 2.5em;
+      margin-bottom: 3.5em;
       @include breakpoint (large) {
         width: 33%;
         margin-bottom:0px;
@@ -600,7 +705,10 @@ nav.mobile-menu .right-side .nav-links{
         }
       }
       .icon-container.cta {
-        transform: scale(1.2);
+        @include breakpoint (large) {
+          transform: scale(1.2);
+        }
+        
       }
       h3, p  {
         padding: 0 50px;
@@ -608,11 +716,16 @@ nav.mobile-menu .right-side .nav-links{
         margin:0px;
       }
       h3 {
-         margin: 1em 0 .25em;
+         margin: .75em 0 .25em;
          color: #3d3d3d;
          font-size:24px;
+         line-height: 27px;
          letter-spacing:3px;
          text-transform: uppercase;
+
+         @include breakpoint (large) {
+            margin: 1.75em 0 .25em;
+         }
       }
       p {
         font-size:18px;
@@ -638,6 +751,18 @@ nav.mobile-menu .right-side .nav-links{
     line-height: 30px;
     width: 300px;
     margin: 0 auto;
+}
+
+.short-para2 {
+    text-align: center;
+    background: #fff;
+    display: block;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+    max-width: 420px;
+    width: 90%;
+    margin: 0 auto 10px;
 }
 
 .short-para.left-align {
@@ -723,6 +848,9 @@ nav.mobile-menu .right-side .nav-links{
         width: 100%;
         border-radius: 4px;
         overflow: hidden;
+        height: 360px;
+        /* margin-bottom: -60px; */
+        padding-top: 90px;
       }
 
         .tiles article > .image img {
@@ -974,7 +1102,7 @@ nav.mobile-menu .right-side .nav-links{
     padding: 2.25em;
     display: none;
     z-index: 90000;
-    position: fixed;
+    position: absolute;
     left: 5%;
     @include breakpoint (medium) {
       left: calc(50% - 320px);
@@ -1010,6 +1138,26 @@ nav.mobile-menu .right-side .nav-links{
     }
 }
 
+textarea {
+  color: #0a0a0a !important;
+}
+
+.parsley-errors-list {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+  li {
+    color: #ff0000;
+    font-size: 14px;
+    font-weight: 400;
+    margin:0px;
+    display: block;
+    margin-bottom: 10px;
+    position: absolute;
+    top: -15px;
+  } 
+}
 
 .quote-overlay {
     position: fixed;
@@ -1058,6 +1206,24 @@ nav.mobile-menu .right-side .nav-links{
 
 }
 
+.thank-you-page {
+    background: linear-gradient(45deg, rgba(5, 19, 255, 0.5), rgba(147, 5, 255, 0.5)), url('../../assets/img/stock1.jpg');
+    height: 110vh;
+    text-align: center;
+    img {
+      width: 200px;
+      margin-top: 10px;
+      margin-bottom: 150px;
+    }
+    h2 {
+      color: #fff;
+    }
+    p {
+      color: #fff;
+      font-size: 30px;
+    }
+}
+
 
 form .form-section input, 
 form .form-section textarea {
@@ -1101,7 +1267,8 @@ form button {
     transition: all .25s;
     margin-bottom: 60px;
     &:hover{
-      border-color:$primary-color;
+      border-bottom: 5px solid $primary-color;
+      border-top: 3px solid #040498;
     };
 }
 .transition-left {
@@ -1157,6 +1324,7 @@ span.footer-cta {
 
 .space-it-out {
   margin-bottom: 280px;
+  margin-top: 30px;
   @include breakpoint(large) {
     margin-bottom: 150px;
   }

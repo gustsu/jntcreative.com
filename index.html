@@ -20,7 +20,7 @@
     <div class="row">
     <div class="nav-line-left"></div>
       <div class="left-side">
-        <a href="./">
+        <a href="#intro">
           <img src="./assets/img/ph_logo6.png" class="top-logo" alt="JNT Creative LLC" title="JNT Creative LLC">
           <img src="./assets/img/ph_logo9.png" class="scroll-logo" alt="JNT Creative LLC" title="JNT Creative LLC">
         </a>
@@ -32,7 +32,7 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#work">Work</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a class="cta-button" id="free-q">Free Quote</a></li>
+          <li><a href="#intro" class="cta-button free-q" id="free-q">Free Quote</a></li>
         </ul>
       </div>
       <span class="lnr lnr-cross mobile-menu-exit-button mobile-close"></span>
@@ -41,27 +41,27 @@
     </div>
   </nav>
   <div class="quote-overlay"></div>
-    <form id="quote-form">
+    <form id="quote-form" action="https://formspree.io/justin@jntcreative.com" method="POST">
       <span class="lnr lnr-cross quote-exit-button"></span>
       <h2>Interested In a Free Quote?</h2>
       <hr class="gradient-line">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Ready to get started working together? Or maybe your just shopping around. Either way I'll get back you in 24 hours with a free quote.</p>
       <div class="form-section">
-        <input type="text" name="name" placeholder="Your Name">
+        <input type="text" name="name" class="form-control" required placeholder="Your Name">
       </div>
       <div class="form-section">
-        <input type="email" name="email" placeholder="Your Email">
+        <input type="email" name="_replyto" class="form-control" required placeholder="Your Email">
       </div>
       <div class="form-section">
-        <input type="text" name="project" placeholder="Project Name">
+        <input type="text" name="project" class="form-control" required placeholder="Project Name">
       </div>
       <div class="form-section">
-        <input type="text" name="budget" placeholder="Your Budget">
+        <input type="text" name="budget" class="form-control" required placeholder="Your Budget">
       </div>
       <div class="form-section">
-        <textarea name="more">Tell Me More</textarea>
+        <textarea name="tell-me-more" required class="form-control" placeholder="Tell Me More"></textarea>
       </div>
+      <input type="hidden" name="_next" value="http://jntcreative.com/thanks.html" />
       <button class="space-it-out" type="submit">Get a Free Quote!</button>
     </form>
 
@@ -69,6 +69,7 @@
     <div class="row">
       <div class="large-12 columns">
         <h1>Custom <br>Web Design <hr class="seperator"><span class=lower>In Spokane, Washington</span></h1>
+        <a href="#intro" class="free-q">Get a Free Quote</a>
       </div>
     </div>
     <div class="bg-bubble-container">
@@ -89,10 +90,15 @@
   </div>
   <div id="about" class="about-section">
     <div class="row">
-      <div class="small-8 medium-6 columns">
-        <h2>Lorem</h2>
+      <div class="small-9 medium-6 columns">
+        <h2>Want a website that stands out from the competition?</h2>
         <hr class="gradient-line">
-        <p class="short-para left-align">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ea officia eveniet, aspernatur ipsam quidem praesentium quia aliquid, ab, est quas. Laborum asperiores voluptate modi soluta non aut esse quae.</p>
+        <p class="short-para left-align">It&#39;s 2017, it&#39;s time your site started to look like it. You need a site that&#39;s different and
+that can take your business to the next level. I can help. Have you ever looked at your website on
+your phone and wondered &quot;Why does this look so strange?&quot; or &quot;Why is this so hard to use?&quot;
+It's because your Web Designer cut corners and didn't do his or her job. Don't worry, making website&#39;s look great
+on everything from your smart phone to your smart TV is just one of many services I
+offer.</p>
       </div>
     </div>
       <img class="giant-mockup" src="./assets/img/a11.png">
@@ -101,28 +107,31 @@
     <div class="row">
       <h2 id="services">Services</h2>
       <hr class="gradient-line center">
-      <p class="short-para">We provide every digital desire your business can imagine. From websites and mobile apps to marketing and promotional material.</p>
+      <p class="short-para2">I provide all the digital services your business could ever need. From websites and mobile apps to marketing promotional material, I do it all.</p>
       <div class="icon-set">
         <div class="icon-item">
           <div class="icon-container">
-            <span class="lnr lnr-eye"></span>
+            <span class="lnr lnr-tablet"></span>
           </div>
           <h3>Mobile App Development </h3>
-          <p>Fugiat iusto eveniet quaerat aliquam quas similique expedita, molestias fugiat expedita.</p>
+          <p>Interested in automating or improving a part of your business? Or in starting a new
+business? I&#39;d love to talk about your idea.</p>
         </div>
           <div class="icon-item icon-item-shadow">
           <div class="icon-container cta">
-            <span class="lnr lnr-magic-wand"></span>
+            <span class="lnr lnr-laptop-phone"></span>
           </div>
           <h3>Web Design &amp; Development</h3>
-          <p>Ipsum dolor sit amet consectetur adipisicing elit. Cumque repellat non molestias fugiat</p>
+          <p>Creating Website&#39;s is what I do best. No Matter if your project is anything from a small
+simple business site to a complex business platform, I&#39;ve got you covered.</p>
         </div>
           <div class="icon-item last">
           <div class="icon-container">
-            <span class="lnr lnr-rocket"></span>
+            <span class="lnr lnr-pencil"></span>
           </div>
-          <h3>Graphic Design &amp; Marketing</h3>
-          <p>Cumque repellat non molestias fugiat iusto eveniet quaerat aliquam quas similique expedita.</p>
+          <h3>Graphic Design &amp; More</h3>
+          <p>I offer an wide array of other services, including: Graphic Design, Web Marketing and
+Advertising, SEO, Website Redesigns, and more.</p>
         </div>
         <div class="clearfix"></div>
       </div>
@@ -134,77 +143,125 @@
       <div class="intro-work">
         <h2>Work</h2>
         <hr class="gradient-line center">
-        <p>Reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Below you will find a small sample of some of my recent work.</p>
       </div>
               <section class="tiles">
                 <article class="style1">
                   <span class="image">
-                    <img src="./assets/img/work_jamesfrye.png" alt="" />
+                    <img src="./assets/img/work_jamesfrye2.png" alt="" />
                   </span>
-                  <a href="generic.html">
+                  <a class="lb-trigger">
                     <h3>James Frye</h3>
                     <div class="content">
                       <p>Jamesfryeartist.com</p>
                     </div>
                   </a>
+                  <div class="lb-content">
+                    <span class="lnr lnr-cross lb-exit-button"></span>
+                    <img src="./assets/img/work_jamesfrye2.png" alt="" />
+                    <div class="lower">
+                      <h3><a target="_blank" href="http://jamesfryeartist.com">Jamesfryeartist.com</a></h3>
+                      <p>A redesign of an old site that allowed for easy modification by the owner. The old
+site did not properly display James&#39; art or communicate who he is. The new site
+does both of those things very well. It also allows for easy updates regarding
+events and shows James will be taking part in.</p>
+                    </div>
+                  </div>
+                  <div class="lb-overlay"></div>
                 </article>
                 <article class="style1">
+                  <span class="image">
+                    <img src="./assets/img/work_rt.png" alt="" />
+                  </span>
+                  <a class="lb-trigger">
+                    <h3>Ralph Tew Artist</h3>
+                    <div class="content">
+                      <p>Ralphtewart.com</p>
+                    </div>
+                  </a>
+                  <div class="lb-content">
+                    <span class="lnr lnr-cross lb-exit-button"></span>
+                    <img src="./assets/img/work_rt.png" alt="" />
+                    <div class="lower">
+                      <h3><a target="_blank" href="http://ralphtewart.com">Ralphtewart.com</a></h3>
+                      <p>A website created for the Artist Ralph Tew to showcases his abstract artwork. It
+features a gallery page where user&#39;s can view his work in full screen as well as a
+contact page where user&#39;s can get in touch with Ralph. It also features a purchase
+page where user&#39;s can request to order a piece of artwork.</p>
+                    </div>
+                  </div>
+                  <div class="lb-overlay"></div>
+                </article>
+                <article class="style1">
+                  <span class="image">
+                    <img src="./assets/img/work_idealx.png" alt="" />
+                  </span>
+                  <a class="lb-trigger">
+                    <h3>Ideal X</h3>
+                    <div class="content">
+                      <p>Concept</p>
+                    </div>
+                  </a>
+                  <div class="lb-content">
+                    <span class="lnr lnr-cross lb-exit-button"></span>
+                    <img src="./assets/img/work_idealx.png" alt="" />
+                    <div class="lower">
+                      <h3><a target="_blank" href="http://justin.digital/capstone2">Demo Site</a></h3>
+                      <p>A wordpress site for a startup company named IdealX. Completed as part of my
+college senior project. It showcases the companies product which is homes build
+from shipping containers. The site has a simple, down to the point but still modern
+feeling. It features product pages with multiple photos and color options as well as
+a function cart and checkout system.</p>
+                    </div>
+                  </div>
+                  <div class="lb-overlay"></div>
+                </article>
+                <article class="style1">
+                  <span class="image">
+                    <img src="./assets/img/work_grower.png" alt="" />
+                  </span>
+                  <a class="lb-trigger">
+                    <h3>Grower App</h3>
+                    <div class="content">
+                      <p>Concept</p>
+                    </div>
+                  </a>
+                  <div class="lb-content">
+                    <span class="lnr lnr-cross lb-exit-button"></span>
+                    <img src="./assets/img/work_grower.png" alt="" />
+                    <div class="lower">
+                      <h3><a>Site Coming Soon</a></h3>
+                      <p>A conceptual App that allows users to capture, log and track photos of there
+plants. As well as get updates about the best methods of growing there plants
+including ideal soil conditions, watering, and growth benchmarks. User can also
+share plant data with friends.</p>
+                    </div>
+                  </div>
+                  <div class="lb-overlay"></div>
+                </article>
+<!--                 <article class="style1">
                   <span class="image">
                     <img src="./assets/img/pic02.jpg" alt="" />
                   </span>
                   <a href="generic.html">
-                    <h3>Lorem</h3>
+                    <h3>Neighborhood Fencing</h3>
                     <div class="content">
-                      <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+                      <p>Neighborhoodfencing.com</p>
                     </div>
                   </a>
-                </article>
-                <article class="style1">
-                  <span class="image">
-                    <img src="./assets/img/pic02.jpg" alt="" />
-                  </span>
-                  <a href="generic.html">
-                    <h3>Feugiat</h3>
-                    <div class="content">
-                      <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+                  <div class="lb-content">
+                    <span class="lnr lnr-cross lb-exit-button"></span>
+                    <img src="./assets/img/work_jamesfrye.png" alt="" />
+                    <div class="lower">
+                      <h3><a href="http://jamesfryeartist.com">Jamesfryeartist.com</a></h3>
+                      <p>A redesign of an old site that allowed for easy modification by the owner. The old
+site did not properly display James&#39; art or communicate who he is. The new site
+does both of those things very well. It also allows for easy updates regarding
+events and shows James will be taking part in.</p>
                     </div>
-                  </a>
-                </article>
-                <article class="style1">
-                  <span class="image">
-                    <img src="./assets/img/pic02.jpg" alt="" />
-                  </span>
-                  <a href="generic.html">
-                    <h3>Tempus</h3>
-                    <div class="content">
-                      <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-                    </div>
-                  </a>
-                </article>
-                <article class="style1">
-                  <span class="image">
-                    <img src="./assets/img/pic02.jpg" alt="" />
-                  </span>
-                  <a href="generic.html">
-                    <h3>Magna</h3>
-                    <div class="content">
-                      <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-                    </div>
-                  </a>
-                </article>
-                <article class="style1">
-                  <span class="image">
-                    <img src="./assets/img/pic02.jpg" alt="" />
-                  </span>
-                  <a href="generic.html">
-                    <h3>Lorem</h3>
-                    <div class="content">
-                      <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-                    </div>
-                  </a>
-                </article>
+                  </div>
+                  <div class="lb-overlay"></div>
+                </article> -->
               </section>
       </div>
   </div>
@@ -213,17 +270,26 @@
       <div class="small-12 medium-12 large-8 columns">
       <h2>Contact</h2>
       <hr class="gradient-line"> 
-      <form id="contact-form">
+      <form id="contact-form" action="https://formspree.io/justin@jntcreative.com" method="POST">
+        <div class="bs-callout bs-callout-warning hidden">
+          <h4>Oh snap!</h4>
+          <p>This form seems to be invalid :(</p>
+        </div>
+        <div class="bs-callout bs-callout-info hidden">
+          <h4>Yay!</h4>
+          <p>Everything seems to be ok :)</p>
+        </div>
         <div class="form-section form-section-half-first">
-          <input type="text" name="name" placeholder="Name">
+          <input type="text" name="name" class="form-control" required placeholder="Name">
         </div>
         <div class="form-section form-section-half-last">
-          <input type="text" name="email" placeholder="Email">
+          <input type="text" name="email" class="form-control" required placeholder="Email">
         </div>
         <div class="form-section">
-          <textarea name="message">Message</textarea>
+          <textarea class="form-control" required placeholder="Message" name="message"></textarea>
         </div>
-        <button class="space-it-out" type="submit">Send</button>
+        <input type="hidden" name="_next" value="http://jntcreative.com/thanks.html" />
+        <button class="space-it-out" type="submit" value="validate">Send</button>
       </form>
       </div>
       
@@ -234,7 +300,7 @@
       <span class="seperator">/</span>
       <span> All rights reserved &copy; 2017</span>
       <span class="seperator">/</span>
-      <span>Hosted By: <a href="#">Digital Ocean</a></span>
+      <span>Hosted By: <a target="_blank" href="https://m.do.co/c/cd6f7f5b4015">Digital Ocean</a></span>
     </div>
   </footer>
   <img class="footer-giant-mockup" src="./assets/img/a10.png">
@@ -242,6 +308,7 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="assets/js/jquery-3.1.1.min.js"><\/script>')</script>
-  <script type="text/javascript" src="assets/js/scripts.min.js"></script> 
+  <script type="text/javascript" src="./assets/js/parsley.min.js"></script> 
+  <script type="text/javascript" src="./assets/js/scripts.min.js"></script> 
 </body>
 </html>

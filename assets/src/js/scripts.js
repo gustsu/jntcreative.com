@@ -8,7 +8,6 @@ $(document).scroll(function() {
 });
 
 $(function(){
-
 	 $('.mobile-menu-button').on('click', function(){
 	 	//$('.right-side .nav-links').addClass('transition');
 	 	$('#main-nav').addClass('mobile-menu');
@@ -24,11 +23,28 @@ $(function(){
 	 	setTimeout(function(){
 	 		$('#main-nav').removeClass('mobile-menu');
 	 	}, 500);
-	 	
-
-
 	 });
-	$('#free-q').on('click', function(){
+
+	$('#contact-form').parsley();
+
+	$('#quote-form').parsley();
+
+	$('.lb-trigger').on('click', function(){
+		$(this).next().fadeIn(500);
+		$(this).next().next().fadeIn(500);
+	});
+
+	$('.lb-exit-button').on('click', function(){
+		$(this).parent().fadeOut(300);
+		$(this).parent().next().fadeOut(300);
+	});
+
+	$('.lb-overlay').on('click', function(){
+		$(this).prev().fadeOut(300);
+		$(this).fadeOut(300);
+	});
+
+	$('.free-q').on('click', function(){
 		$('.quote-overlay').fadeIn(500);
 		$('#quote-form').fadeIn(500);
 	});
