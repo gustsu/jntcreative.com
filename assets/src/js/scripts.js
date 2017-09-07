@@ -15,6 +15,16 @@ $(function(){
 	 	$('.mobile-menu-button').hide();
 	 	$('.mobile-menu-exit-button').show();
 	 });
+
+	$('body').on('click', '.mobile-menu .nav-links a', function(){
+		$('.mobile-menu-button').show();
+	 	$('.mobile-menu-exit-button').hide();
+	 	$('.nav-links').fadeOut(500);
+	 	setTimeout(function(){
+	 		$('#main-nav').removeClass('mobile-menu');
+	 	}, 500);
+	});
+
 	$('.mobile-menu-exit-button').on('click', function(){
 		//$('.right-side .nav-links').removeClass('transition');
 		$('.mobile-menu-button').show();
