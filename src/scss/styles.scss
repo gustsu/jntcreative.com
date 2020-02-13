@@ -398,7 +398,7 @@ p.parsley-error {
 		line-height: 1em;
 		text-align: left;
 		@include breakpoint(medium) {
-			font-size: 5em;
+			font-size: 6em;
 			line-height: 1.2em;
 		}
 		.seperator {
@@ -1351,4 +1351,8 @@ footer {
 			color: #ccc;
 		}
 	}
+}
+
+.d-block {
+	display: block;
 }
